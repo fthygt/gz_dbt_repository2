@@ -17,6 +17,27 @@ sources:
       - name: facebook
         identifier: raw_gz_facebook
 
+      - name: sales
+        identifier: raw_gz_sales
+
+      - name: product
+        identifier: raw_gz_product
+        description: "product infos"
+        columns:
+          - name: products_id
+            tests:
+              - unique
+              - not_null
+
+      - name: ship
+        identifier: raw_gz_ship
+        description: "shipping infos"
+        columns:
+          - name: orders_id
+            tests:
+              - unique
+              - not_null
+
 models:
   - name: int_campaigns
     description: "all datas coming from all tables"
@@ -46,3 +67,6 @@ models:
         description: total daily impression number
       - name: ads_click
         description: total daily click number
+    
+  - name: finance_campaigns_day 
+    description: A view shows daily advertisement margin from finance_days+int_campaigns_day

@@ -67,3 +67,6 @@ models:
         description: total daily impression number
       - name: ads_click
         description: total daily click number
+    
+  - name: finance_campaigns_day 
+    description: A view shows daily advertisement margin from finance_days+int_campaigns_day

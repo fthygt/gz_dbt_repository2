@@ -34,3 +34,15 @@ models:
       - name: campaign_name
         tests:
           - not_null
+      
+  - name: int_campaigns_day
+    description: daily total campaign datas
+    columns:
+      - name: date_date
+        description: date
+      - name: ads_cost
+        description: total daily advertisement cost
+      - name: ads_impression
+        description: total daily impression number
+      - name: ads_click
+        description: total daily click number

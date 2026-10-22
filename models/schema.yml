@@ -22,9 +22,21 @@ sources:
 
       - name: product
         identifier: raw_gz_product
+        description: "product infos"
+        columns:
+          - name: products_id
+            tests:
+              - unique
+              - not_null
 
       - name: ship
         identifier: raw_gz_ship
+        description: "shipping infos"
+        columns:
+          - name: orders_id
+            tests:
+              - unique
+              - not_null
 
 models:
   - name: int_campaigns
